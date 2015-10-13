@@ -34,3 +34,8 @@ URL EXAMPLE: http://localhost:8080/lottery/ticket/check?ticketId=1
 RESPONSE: {"results":[{"lotteryLine":{"lineNumbers":[1,0,1]},"lotteryLineValue":10},{"lotteryLine":{"lineNumbers":[2,0,1]},"lotteryLineValue":1},{"lotteryLine":{"lineNumbers":[2,1,1]},"lotteryLineValue":1}]}
 
 
+BUILD:
+mvn clean install
+
+RUN
+java -jar target/LotteryGame-1.0-SNAPSHOT.jar
