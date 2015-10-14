@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import javax.persistence.OptimisticLockException;
+
 /**
  * Created by user on 12/10/2015.
  */
@@ -23,4 +25,8 @@ public class LotteryExceptionHandler {
     @ResponseStatus(value = HttpStatus.BAD_REQUEST)
     @ExceptionHandler(InvalidRequestException.class)
     public void invalidRequest(){};
+
+    @ResponseStatus(value = HttpStatus.CONFLICT, reason = "Modified by another User")
+    @ExceptionHandler(OptimisticLockException.class)
+    public void concurrentAccess(){};
 }
