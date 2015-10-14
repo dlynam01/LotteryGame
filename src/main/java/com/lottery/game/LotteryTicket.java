@@ -23,6 +23,9 @@ public class LotteryTicket {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+	@Version
+	private long version = 0L;
+
     public LotteryTicket(){}
 
     public LotteryTicket(long id) {

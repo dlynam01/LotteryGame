@@ -20,12 +20,12 @@ SEE LotteryWebInterface for Further Descriptions.
 
 CREATE LOTTERY TICKET
 HTTP METHOD: POST
-URL EXAMPLE: http://localhost:8080/lottery/ticket/update?numberLines=2&ticketId=1
+URL EXAMPLE: http://localhost:8080/lottery/ticket/create?numberLines=2
 RESPONSE: {"lines":[{"lineNumbers":[1,0,1]},{"lineNumbers":[2,0,1]},{"lineNumbers":[2,1,1]}],"checked":false,"ticketId":1}
 
 AMEND LOTTERY TICKET
 HTTP METHOD: PUT
-URL EXAMPLE: http://localhost:8080/lottery/ticket/check?ticketId=1
+URL EXAMPLE: http://localhost:8080/lottery/ticket/update?ticketId=1&numberLines=2
 RESPONSE: {"results":[{"lotteryLine":{"lineNumbers":[1,0,1]},"lotteryLineValue":10},{"lotteryLine":{"lineNumbers":[2,0,1]},"lotteryLineValue":1},{"lotteryLine":{"lineNumbers":[2,1,1]},"lotteryLineValue":1}]}
 
 CHECK LOTTERY TICKET

@@ -1,10 +1,7 @@
 package com.lottery.game;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by user on 11/10/2015.
@@ -17,6 +14,9 @@ public class LotteryLine {
     private long lineId;
 
     private int[] lineNumbers = new int[3];
+
+	@Version
+	private long version = 0L;
 
     public LotteryLine(){}
 
